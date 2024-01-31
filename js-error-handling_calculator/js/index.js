@@ -23,6 +23,10 @@ form.addEventListener("submit", (event) => {
     const operation = event.target.operation.value;
     output.innerText = operations[operation](firstNumber, secondNumber);
   } catch (error) {
-    console.log("Please choose a number rather than 0 as divisor, thank you!.");
+    // console.log("Please choose a number rather than 0 as divisor, thank you!.");
+    return (output.innerText = error);
   }
 });
+
+// throw new Error("Cannot divide by zero!")
+// return (output.innerText = error)
