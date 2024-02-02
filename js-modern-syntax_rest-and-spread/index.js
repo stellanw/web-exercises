@@ -28,9 +28,9 @@ const list = ["one", "two", "three", "four", "five"];
 
 export const [first, second, ...restOfList] = list;
 
-console.log(first);
-console.log(second);
-console.log(restOfList);
+// console.log(first);
+// console.log(second);
+// console.log(restOfList);
 
 // EXERCISE 3
 // a) The `add` function does not work because it needs an array as argument.
@@ -43,7 +43,7 @@ function add(...allNumbers) {
 }
 
 export const sum = add(3, 2, 3, 2, 1, 2, 3, 4);
-console.log(sum);
+// console.log(sum);
 
 // EXERCISE 4
 // a) Below, the `add` function is called with an array as argument.
@@ -53,7 +53,7 @@ console.log(sum);
 const numbers = [3, 2, 1];
 export const result = add(...numbers);
 
-console.log(result);
+// console.log(result);
 
 // EXERCISE 5
 // a) Create a variable `allFruits` which contains `anotherFruit` and `fruits`
@@ -65,4 +65,4 @@ const fruits = ["apple", "banana", "orange", "papaya"];
 const anotherFruit = "cherry";
 export const allFruits = [anotherFruit, ...fruits];
 
-console.log(allFruits);
+// console.log(allFruits);
