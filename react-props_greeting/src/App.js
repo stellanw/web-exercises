@@ -10,5 +10,10 @@ export default function App() {
 }
 
 function Greeting({ name }) {
-  return <h1>Welcome, {" " + name + "!"}</h1>;
+  return (
+    <div>
+      <h1>Welcome, {" " + name + "!"}</h1>
+      <p>Wie gehts dir {name}?</p>
+    </div>
+  );
 }
