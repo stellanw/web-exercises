@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import Box from "./components/Box";
 
-function Boxes({ children }) {
+function Boxes() {
   return (
     <>
       <Box color="#007bff" />
