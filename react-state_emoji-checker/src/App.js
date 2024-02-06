@@ -7,7 +7,7 @@ export default function App() {
   const [isCodeValid, setIsCodeValid] = useState(false);
   const validCode = "🐡🐠🐋";
 
-  function handleClick() {
+  function handleClick(event) {
     const clickedEmoji = event.target.textContent;
     const newCode = code + clickedEmoji;
     setCode(newCode);
@@ -23,16 +23,16 @@ export default function App() {
   return (
     <div className="container">
       <div className="button-container">
-        <button type="button" onClick={() => handleClick()}>
+        <button type="button" onClick={(event) => handleClick(event)}>
           <span role="img" aria-label="Pufferfish">
             🐡
           </span>
         </button>
         <button
           type="button"
-          onClick={() => {
-            handleClick();
-            console.log(handleClick());
+          onClick={(event) => {
+            handleClick(event);
+            console.log(handleClick(event));
           }}
         >
           <span role="img" aria-label="Whale">
@@ -41,8 +41,8 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {
-            handleClick();
+          onClick={(event) => {
+            handleClick(event);
           }}
         >
           <span role="img" aria-label="Clownfish">
