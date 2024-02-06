@@ -16,17 +16,3 @@ export default function App() {
     </main>
   );
 }
-
-// <main className="app">
-// <Title text="ClientBoard" />
-// <div className="app__card-grid">
-//   {users.map((user) => (
-//     <Card
-//       key={user.id}
-//       name={user.name}
-//       roles={user.roles}
-//       about={user.about}
-//     />
-//   ))}
-// </div>
-// </main>
