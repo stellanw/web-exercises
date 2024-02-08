@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-use-localstorage": "^3.5.3"
+  }
+}
