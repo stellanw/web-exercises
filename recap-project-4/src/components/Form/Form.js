@@ -1,25 +1,27 @@
 import { useState } from "react";
 import "./Form.css";
+import useLocalStorageState from "use-local-storage-state";
 
-function Form({ onAddActivity }) {
+export default function Form({
+  onAddActivity,
+  isGoodWeatherActivity,
+  setIsGoodWeatherActivity,
+}) {
   const [name, setName] = useState("");
-  const [isGoodWeatherActivity, setIsGoodWeatherActivity] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("new submit", setName, setIsGoodWeatherActivity);
     onAddActivity({
       name: name,
-      isGoodWeatherActivity: isGoodWeatherActivity,
+      isGoodWeatherActivity: !isGoodWeatherActivity,
     });
     setName("");
-    setIsGoodWeatherActivity(false);
   }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h2>Add a new Activity</h2>
-      <label className="form__label" name="input">
+      <label htmlFor="name" className="form__label" name="input">
         Name:{" "}
         <input
           type="text"
@@ -28,10 +30,12 @@ function Form({ onAddActivity }) {
           onChange={(event) => setName(event.target.value)}
         />
       </label>
-      <label className="form__label">
+      <label htmlFor="isGoodWeather" className="form__label">
         Good weather activity?
         <input
+          id="isGoodWeather"
           type="checkbox"
+          name="isGoodWeather"
           checked={isGoodWeatherActivity}
           onChange={(event) => setIsGoodWeatherActivity(event.target.checked)}
         />
@@ -42,5 +46,3 @@ function Form({ onAddActivity }) {
     </form>
   );
 }
-
-export default Form;
