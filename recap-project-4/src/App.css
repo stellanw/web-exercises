@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  margin-top: -1rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  background-color: #7bfc9b;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
