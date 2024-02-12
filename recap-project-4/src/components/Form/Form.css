@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #7bfc9b;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  padding-top: 0.2rem;
+  gap: 1rem;
+  width: 300px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form__button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(44, 194, 144);
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+}
