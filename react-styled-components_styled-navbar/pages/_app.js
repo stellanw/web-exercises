@@ -1,6 +1,11 @@
 import Link from "next/link";
 import GlobalStyle from "../styles";
 import styled from "styled-components";
+import { Dosis } from "next/font/google";
+
+const dosis = Dosis({ subsets: ["latin"] });
+
+console.log(dosis);
 
 const StyledNav = styled.nav`
   border-bottom: solid 2px grey;
@@ -15,6 +20,7 @@ const StyledList = styled.ul`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  font-family: ${dosis.style.fontFamily};
   &:hover {
     text-decoration: underline;
   }

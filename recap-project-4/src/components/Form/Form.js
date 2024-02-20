@@ -13,17 +13,18 @@ export default function Form({
     event.preventDefault();
     onAddActivity({
       name: name,
-      isGoodWeatherActivity: !isGoodWeatherActivity,
+      isGoodWeatherActivity: isGoodWeatherActivity,
     });
-    setName("");
+    event.target.reset();
   }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h2>Add a new Activity</h2>
-      <label htmlFor="name" className="form__label" name="input">
+      <label htmlFor="name" className="form__label">
         Name:{" "}
         <input
+          id="name"
           type="text"
           name="input"
           value={name}
